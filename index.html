@@ -15,14 +15,17 @@
 
   body {
     margin: 0;
+    background: #0b0d10;
+    color: #e6e8eb;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  .hero {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #0b0d10;
-    color: #e6e8eb;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     text-align: center;
     padding: 24px;
   }
@@ -36,20 +39,116 @@
   p.tagline {
     font-size: clamp(1rem, 2vw, 1.25rem);
     color: #9aa0a6;
-    margin: 0 0 40px;
+    margin: 0;
+  }
+
+  .projects {
+    padding: 80px 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .projects h2 {
+    text-align: center;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin: 0 0 48px;
+  }
+
+  .project-card {
+    background: #14171b;
+    border: 1px solid #23272d;
+    border-radius: 12px;
+    padding: 32px;
+  }
+
+  .project-card h3 {
+    margin: 0 0 4px;
+    font-size: 1.5rem;
+  }
+
+  .project-card .project-link {
+    color: #9aa0a6;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+
+  .project-card .project-link:hover {
+    color: #e6e8eb;
+  }
+
+  .project-card p.description {
+    color: #c3c7cb;
+    line-height: 1.6;
+    margin: 16px 0 28px;
+    max-width: 640px;
+  }
+
+  .screenshots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .screenshots img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid #23272d;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  }
+
+  @media (max-width: 700px) {
+    .screenshots {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 420px) {
+    .screenshots {
+      grid-template-columns: 1fr;
+    }
+
+    .screenshots img {
+      max-width: 240px;
+    }
   }
 
   footer {
-    position: fixed;
-    bottom: 24px;
+    text-align: center;
+    padding: 24px;
     font-size: 0.85rem;
     color: #5f6368;
   }
 </style>
 </head>
 <body>
-  <h1>Laestrygon</h1>
-  <p class="tagline">Software, built well.</p>
+  <section class="hero">
+    <h1>Laestrygon</h1>
+    <p class="tagline">Software, built well.</p>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Collectiary</h3>
+      <a class="project-link" href="https://collectiary.com" target="_blank" rel="noopener">collectiary.com</a>
+      <p class="description">
+        A personal collection manager. Catalog items with photos and notes, group
+        them into collections, and track exactly where each one lives down to
+        the shelf or cabinet. Keep a record of who you've lent items to or
+        borrowed items from, so nothing gets lost track of.
+      </p>
+      <div class="screenshots">
+        <img src="images/mob_collectiary_my_items_20260905_145705.png" alt="Collectiary items list with search and lending status">
+        <img src="images/mob_collectiary_my_collections_20260905_150106.png" alt="Collectiary collections grouped by category">
+        <img src="images/mob_collectiary_my_places_20260905_145525.png" alt="Collectiary places showing a hierarchy of storage locations">
+        <img src="images/mob_collectiary_profile_20260905_150224.png" alt="Collectiary contact profile showing shared collections">
+      </div>
+    </div>
+  </section>
+
   <footer>&copy; 2026 Laestrygon</footer>
 </body>
 </html>
