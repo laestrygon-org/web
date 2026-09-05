@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Playball&display=swap" rel="stylesheet">
+
 <title>Laestrygon</title>
 <style>
   :root {
@@ -13,6 +18,19 @@
   * {
     box-sizing: border-box;
   }
+
+  .brand{
+      font-family: "Bungee Inline", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+  }
+
+  .playball-regular {
+    font-family: "Playball", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 
   body {
     margin: 0;
@@ -126,14 +144,14 @@
 </head>
 <body>
   <section class="hero">
-    <h1>Laestrygon</h1>
+    <h1 class="brand">Læstrygon</h1>
     <p class="tagline">Software, built well.</p>
   </section>
 
   <section class="projects">
-    <h2>Projects</h2>
+    <h2 class="brand">Projects</h2>
     <div class="project-card">
-      <h3>Collectiary</h3>
+      <h3 class="playball-regular">Collectiary</h3>
       <a class="project-link" href="https://collectiary.com" target="_blank" rel="noopener">collectiary.com</a>
       <p class="description">
         A personal collection manager. Catalog items with photos and notes, group
